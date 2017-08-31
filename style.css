@@ -7,4 +7,11 @@ button {
     color: white;
     height: 50px;
     width: 100px;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+table {
+    background-color: #d8e5e5;
 }

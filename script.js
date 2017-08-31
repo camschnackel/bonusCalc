@@ -58,9 +58,6 @@ console.log('script.js sourced');
 // console.log('Employee  test ->', hunter)
 // console.log('employeeList array ->', employeeList);
 
-
-
-
 function bonusCalc(rating, salary, employeeNumber) {
     var percentage = 0;
     // Beginning of rating check
@@ -99,7 +96,7 @@ function Bonus(employee) {
     this.totalBonus = this.totalBonus.toString();
     this.totalCompensation = this.totalCompensation.toString();
     // console.log('Employee Payout -> ', this.totalCompensation);
-}
+};
 
 //console.log('bonus test -> ', new Bonus(hunter));
 var bonusList = [];
@@ -109,16 +106,16 @@ function checkEmployees(listOfEmployees) {
         bonusList.push(new Bonus(listOfEmployees[i]));
         console.log('Employee Payout -> ', bonusList[i]);
     };
-}
+};
 
 checkEmployees(employees);
 
 console.log(bonusList);
 
-// move onto Hard Mode
+// move onto Hard & Pro Mode
 
 
-
+// Loops through list of employees and adds rows and cells to table with the results
 var calcItUp = function() {
     for (var i = 0; i < bonusList.length; i++) {
         console.log('My data is ', bonusList[i]);
@@ -138,9 +135,11 @@ var calcItUp = function() {
         $("#newTable > tbody:last-child").append("</tr>");
     }; $('#pressMe').hide();
 };
+
+// Executes calcItUp function on button click
 var doIt = function() {
     $('#pressMe').on('click', calcItUp);
+};
 
-}
-
+// Loads button click function
 $(document).ready(doIt);
