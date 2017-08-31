@@ -136,9 +136,11 @@ var calcItUp = function() {
             $('#comp').replaceWith(bonusList[i].totalCompensation);
         $("#newTable > tbody:last-child").append("</span></td>");
         $("#newTable > tbody:last-child").append("</tr>");
-    };
+    }; $('#pressMe').hide();
 };
 var doIt = function() {
-    $('#pressMe').on('click', calcItUp)
+    $('#pressMe').on('click', calcItUp);
+
 }
+
 $(document).ready(doIt);
